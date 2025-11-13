@@ -1177,6 +1177,8 @@ show_help() {
     echo ""
     echo -e "${YELLOW}$(t 'tool_options'):${NC}"
     echo "  status, st       - $(t 'show_current_config')"
+    echo "  apply            - Apply pending model switch from dashboard"
+    echo "  ui               - Launch CCM Dashboard web interface"
     echo "  env [model]      - $(t 'output_export_only')"
     echo "  pp [model]       - Switch to PPINFRA service (deepseek/glm/kimi/qwen/minimax)"
     echo "  config, cfg      - $(t 'edit_config_file')"
@@ -1692,6 +1694,25 @@ main() {
             ;;
         "status"|"st")
             show_status
+            ;;
+        "apply")
+            # Apply pending model switch from dashboard
+            if [[ -x "$(dirname "${BASH_SOURCE[0]:-$0}")/ccm-apply" ]]; then
+                source "$(dirname "${BASH_SOURCE[0]:-$0}")/ccm-apply"
+            else
+                echo -e "${RED}❌ ccm-apply script not found${NC}" >&2
+                return 1
+            fi
+            ;;
+        "ui")
+            # Launch CCM Dashboard
+            if [[ -x "$(dirname "${BASH_SOURCE[0]:-$0}")/ccm-ui" ]]; then
+                "$(dirname "${BASH_SOURCE[0]:-$0}")/ccm-ui"
+            else
+                echo -e "${RED}❌ ccm-ui script not found${NC}" >&2
+                echo -e "${YELLOW}💡 Please run install-ui.sh first${NC}" >&2
+                return 1
+            fi
             ;;
         "config"|"cfg")
             edit_config
