@@ -126,10 +126,14 @@ The installation process:
 - Creates `~/.ccm_config` on first use (if it doesn't exist)
 
 **Does NOT:**
-- Modify system files
+- Modify system files (only user files in your home directory)
 - Change your PATH
 - Require sudo/root access
-- Affect other shell configurations
+
+**What it DOES modify:**
+- Adds `ccm()` and `ccc()` functions to your shell RC file (~/.zshrc or ~/.bashrc)
+- Uses marker comments for clean installation/uninstallation
+- Does not affect any other shell settings or configurations
 
 ### Method 3: Web Dashboard (Optional)
 
