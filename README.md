@@ -32,6 +32,7 @@ ccc deepseek     # Launch Claude Code with DeepSeek
 
 ## 🌟 Features
 
+### CLI Tools
 - 🤖 **Multi-model Support**: Claude, Deepseek, KIMI, GLM, Qwen and other mainstream AI models
 - 🔄 **Smart Fallback Mechanism**: Official API priority with automatic fallback to PPINFRA backup service
 - ⚡ **Quick Switching**: One-click switching between different AI models to boost productivity
@@ -39,6 +40,13 @@ ccc deepseek     # Launch Claude Code with DeepSeek
 - 🎨 **Colorful Interface**: Intuitive command-line interface with clear switching status display
 - 🛡️ **Secure Configuration**: Independent configuration file for API key management
 - 📊 **Status Monitoring**: Real-time display of current model configuration and key status
+
+### Web Dashboard (NEW)
+- 🖥️ **Visual Model Management**: Browse and switch models through an intuitive web interface
+- 📈 **Usage Analytics**: Track model usage patterns, costs, and get optimization recommendations
+- 🔖 **Model Presets**: Save favorite configurations for quick one-click switching
+- 🔑 **API Key Management**: Securely manage API keys through a settings panel
+- 📊 **Cost Tracking**: Monitor estimated costs and identify savings opportunities
 
 ## 📦 Supported Models
 
@@ -122,6 +130,28 @@ The installation process:
 - Change your PATH
 - Require sudo/root access
 - Affect other shell configurations
+
+### Method 3: Web Dashboard (Optional)
+
+Install the web dashboard for visual model management:
+
+```bash
+cd claude-code-switch
+chmod +x install-ui.sh
+./install-ui.sh
+```
+
+Launch the dashboard:
+```bash
+ccm ui    # Opens web dashboard in your browser
+```
+
+**Dashboard Features:**
+- Visual model selection with status indicators
+- Usage analytics and cost tracking
+- Model presets for quick switching
+- API key management interface
+- Real-time configuration preview
 
 ## ⚙️ Configuration
 
@@ -337,10 +367,34 @@ ccm status        # View current status (masked)
 ccm config        # Edit configuration
 ccm help          # Show help
 ccc               # Show ccc usage help
+
+# Web dashboard
+ccm ui            # Launch web dashboard
+ccm apply         # Apply model switch from dashboard
 ```
 
-### Command Shortcuts
+### Web Dashboard Usage
 
+```bash
+# Launch the dashboard
+ccm ui
+# Opens http://localhost:3000 in your browser
+
+# Switch models in the dashboard, then apply:
+ccm apply
+# Reads ~/.ccm_active_model and updates your environment
+
+# Restart your shell or run:
+source ~/.zshrc   # or source ~/.bashrc
+```
+
+**Dashboard Workflow:**
+1. Open dashboard with `ccm ui`
+2. Select a model and click "Switch"
+3. Run `ccm apply` in your terminal
+4. Reload your shell to activate the new model
+
+### Command Shortcuts
 ```bash
 # ccm shortcuts
 ccm ds           # Short for deepseek
