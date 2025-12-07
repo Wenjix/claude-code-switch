@@ -68,8 +68,8 @@ ccc deepseek     # Launch Claude Code with DeepSeek
 > 🎁 **GLM-4.6 Official Registration**
 >
 > Get started with Zhipu AI's official Claude Code integration:
-> - **Registration Link**: https://www.bigmodel.cn/claude-code?ic=5XMIOZPPXB
-> - **Invitation Code**: `5XMIOZPPXB`
+> - **Registration Link**:  https://z.ai/subscribe?ic=LKSRNUOCHE
+> - **Invitation Code**: `LKSRNUOCHE`
 >
 > GLM-4.6 supports official Claude Code integration with zero-configuration experience. No API key needed to get started!
 
