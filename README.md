@@ -62,7 +62,7 @@ ccc deepseek     # Launch Claude Code with DeepSeek
 | 🐪 **Qwen** | ✅ qwen3-max (Alibaba DashScope) | ✅ qwen3-next-80b-a3b-thinking | Alibaba Cloud official |
 | 🇨🇳 **GLM4.6** | ✅ glm-4.6 | ✅ zai-org/glm-4.6 | Zhipu AI |
 | 🧠 **Claude Sonnet 4.5** | ✅ claude-sonnet-4-5-20250929 | ❌ Official only | Balanced performance |
-| 🚀 **Claude Opus 4.1** | ✅ claude-opus-4-1-20250805 | ❌ Official only | Strongest reasoning |
+| 🚀 **Claude Opus 4.5** | ✅ claude-opus-4-5-20251101 | ❌ Official only | Strongest reasoning |
 | 🔷 **Claude Haiku 4.5** | ✅ claude-haiku-4-5 | ❌ Official only | Fast and efficient |
 
 > 🎁 **GLM-4.6 Official Registration**
@@ -200,7 +200,7 @@ MINIMAX_MODEL=MiniMax-M2
 QWEN_MODEL=qwen3-max
 GLM_MODEL=glm-4.6
 CLAUDE_MODEL=claude-sonnet-4-5-20250929
-OPUS_MODEL=claude-opus-4-1-20250805
+OPUS_MODEL=claude-opus-4-5-20251101
 
 # Fallback service (only enabled when official keys are missing)
 PPINFRA_API_KEY=your-ppinfra-api-key
@@ -348,7 +348,7 @@ ccm kat           # Switch to StreamLake (KAT)
 ccm glm           # Switch to GLM4.6
 ccm longcat       # Switch to LongCat
 ccm claude        # Switch to Claude Sonnet 4.5
-ccm opus          # Switch to Claude Opus 4.1
+ccm opus          # Switch to Claude Opus 4.5
 ccm haiku         # Switch to Claude Haiku 4.5
 
 # Switch to PPINFRA service
@@ -404,7 +404,7 @@ source ~/.zshrc   # or source ~/.bashrc
 ccm ds           # Short for deepseek
 ccm mm           # Short for minimax
 ccm s            # Short for claude sonnet
-ccm o            # Short for opus
+ccm o            # Short for opus (Claude Opus 4.5)
 ccm h            # Short for haiku
 ccm st           # Short for status
 
